@@ -13,8 +13,8 @@ dependencies:
     sdk: flutter
 
   socket_io_client: ^0.9.10
-  bonfire: ^0.5.1
-    # path: "../bonfire"
+  bonfire:
+    path: "../bonfire"
 
 dev_dependencies:
   flutter_test:

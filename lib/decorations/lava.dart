@@ -14,12 +14,12 @@ class Spikes extends GameDecoration {
           initPosition: initPosition,
           width: TILE_SIZE,
           height: TILE_SIZE,
-          isSensor: true,
-          collision: Collision(
-            width: TILE_SIZE,
-            height: TILE_SIZE,
-            align: CollisionAlign.CENTER,
-          ),
+          isSensor: false,
+          // collision: Collision(
+          //   width: TILE_SIZE,
+          //   height: TILE_SIZE,
+          //   align: CollisionAlign.CENTER,
+          // ),
         );
 
   @override

@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:bonfire/bonfire.dart';
 import 'package:flame/animation.dart' as FlameAnimation;
 import 'package:humerus/constants.dart';
+import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 class Knight extends SimplePlayer {
   final Position initPosition;
@@ -11,8 +12,9 @@ class Knight extends SimplePlayer {
   bool showObserveEnemy = false;
   bool showTalk = false;
   List<bool> movingDirections = [false, false, false, false];
+  IO.Socket socket;
 
-  Knight(this.initPosition)
+  Knight(this.initPosition, this.socket)
       : super(
           animIdleLeft: FlameAnimation.Animation.sequenced(
             "player/knight_idle_left.png",
@@ -68,6 +70,7 @@ class Knight extends SimplePlayer {
     }
 
     joystickChangeDirectional(JoystickDirectionalEvent(directional: direction));
+    if (direction != JoystickMoveDirectional.IDLE) socket?.emit('move', '{"x": "${position.left}", "y": "${position.top}"}');
   }
 
   @override

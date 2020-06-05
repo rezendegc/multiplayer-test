@@ -74,7 +74,7 @@ const RESOURCES = {
 "assets/FontManifest.json": "9e95336a7b884ffe32279be600570a11",
 "assets/AssetManifest.json": "90ec029bcee93a9efe770f2d2d407744",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"main.dart.js": "ddd214061ab700b6dcfd87616c32f40d",
+"main.dart.js": "0ffeb549553004ce18f5eada7c4bd133",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
 };
 
